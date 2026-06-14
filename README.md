@@ -1,5 +1,11 @@
 # Research Multi-Agent Flow Skill
 
+## Version
+
+Current version: `v0.1.0`
+
+This initial release packages the core Research Multi-Agent Flow skill, task-card templates, review prompts, project-file conventions, and open-source repository metadata.
+
 `research-multi-agent-flow` is a Codex skill for personal research codebases that use Codex, OpenCode, Git, task cards, and experiment records together.
 
 The workflow keeps responsibilities explicit:
