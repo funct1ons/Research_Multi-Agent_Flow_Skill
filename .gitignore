@@ -1,0 +1,43 @@
+# Python and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and local env
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary output
+*.log
+tmp/
+temp/
+outputs/
+runs/
+
+# Research artifacts usually too large for Git
+data/
+datasets/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.npy
+*.npz
+
+# Notebook checkpoints
+.ipynb_checkpoints/

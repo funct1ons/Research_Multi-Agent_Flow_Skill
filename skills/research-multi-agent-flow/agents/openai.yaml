@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Multi-Agent Flow"
+  short_description: "Coordinate Codex and OpenCode in research repos"
+  default_prompt: "Use $research-multi-agent-flow to plan, execute, review, and record a small research coding task."
