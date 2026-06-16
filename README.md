@@ -2,9 +2,9 @@
 
 ## Version
 
-Current version: `v0.2.0`
+Current version: `v0.2.1`
 
-This release generalizes the implementation role from a fixed OpenCode agent to a flexible Execution Agent role, while keeping Codex focused on planning, review, and research-semantics checks.
+This release replaces the Chinese workflow guide with an English user guide for clearer formatting and broader reuse.
 
 `research-multi-agent-flow` is a Codex skill for personal research codebases that use Codex, execution agents, Git, task cards, and experiment records together.
 
@@ -29,7 +29,7 @@ tasks/
 
 docs/
   workflow.md
-  workflow.zh-CN.md
+  user-guide.md
 
 AGENTS.md
 LOG.md
@@ -62,7 +62,7 @@ Use $research-multi-agent-flow to create a task card for my next research coding
 ## Documentation
 
 - [Workflow overview](docs/workflow.md)
-- [中文工作流指南](docs/workflow.zh-CN.md)
+- [User guide](docs/user-guide.md)
 
 ## Validation
 
