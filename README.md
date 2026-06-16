@@ -2,9 +2,9 @@
 
 ## Version
 
-Current version: `v0.1.0`
+Current version: `v0.1.1`
 
-This initial release packages the core Research Multi-Agent Flow skill, task-card templates, review prompts, project-file conventions, and open-source repository metadata.
+This release adds a Chinese user guide with a full daily workflow example, alongside the core Research Multi-Agent Flow skill, task-card templates, review prompts, project-file conventions, and open-source repository metadata.
 
 `research-multi-agent-flow` is a Codex skill for personal research codebases that use Codex, OpenCode, Git, task cards, and experiment records together.
 
@@ -29,6 +29,7 @@ tasks/
 
 docs/
   workflow.md
+  workflow.zh-CN.md
 
 AGENTS.md
 LOG.md
@@ -58,7 +59,10 @@ Use $research-multi-agent-flow to create a task card for my next research coding
 5. Ask Codex to review task card, handoff, and diff before merge.
 6. Record important experiments under `experiments/` with config, command, commit hash, metrics, and notes.
 
-See [docs/workflow.md](docs/workflow.md) for the full process.
+## Documentation
+
+- [Workflow overview](docs/workflow.md)
+- [中文工作流指南](docs/workflow.zh-CN.md)
 
 ## Validation
 
