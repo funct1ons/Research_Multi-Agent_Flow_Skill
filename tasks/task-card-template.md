@@ -8,6 +8,38 @@ OpenCode
 
 planned
 
+Allowed values:
+
+- `planned`: Task card exists, but implementation has not started.
+- `in_progress`: The implementation agent is actively working on the task.
+- `implemented`: Implementation is finished and the handoff is filled, but review has not happened.
+- `needs_review`: Waiting for Codex or human review.
+- `changes_requested`: Review found required changes.
+- `ready_to_merge`: Review and validation are acceptable; waiting for the human merge decision.
+- `done`: The task has been merged, closed, or explicitly accepted by the human user.
+- `blocked`: Progress needs a human decision, external resource, or task split.
+- `abandoned`: The task was intentionally dropped.
+
+Status transitions:
+
+- `planned` -> `in_progress`
+- `in_progress` -> `implemented`
+- `implemented` -> `needs_review`
+- `needs_review` -> `changes_requested`
+- `changes_requested` -> `in_progress`
+- `needs_review` -> `ready_to_merge`
+- `ready_to_merge` -> `done`
+- Any non-terminal status -> `blocked`
+- `blocked` -> `planned` or `in_progress`
+- Any non-terminal status -> `abandoned`
+
+Rules:
+
+- Only the implementation agent should move `in_progress` to `implemented`, and only after filling the Handoff section.
+- Only review can move a task to `ready_to_merge`.
+- Only the human user can move a task to `done`.
+- `done` and `abandoned` are terminal unless the human user explicitly reopens the task.
+
 ## Branch
 
 <type>/<short-name>

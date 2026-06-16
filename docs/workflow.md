@@ -26,6 +26,42 @@ Use files and Git as the coordination layer:
 9. Commit and squash-merge only after validation.
 10. Record important experiment results with config, command, commit hash, metrics, and notes.
 
+## Task Status Model
+
+Use these status values in task cards:
+
+- `planned`: Task card exists, but implementation has not started.
+- `in_progress`: The implementation agent is actively working on the task.
+- `implemented`: Implementation is finished and handoff is filled, but review has not happened.
+- `needs_review`: Waiting for Codex or human review.
+- `changes_requested`: Review found required changes.
+- `ready_to_merge`: Review and validation are acceptable; waiting for the human merge decision.
+- `done`: The task has been merged, closed, or explicitly accepted by the human user.
+- `blocked`: Progress needs a human decision, external resource, or task split.
+- `abandoned`: The task was intentionally dropped.
+
+Normal transitions:
+
+```text
+planned -> in_progress
+in_progress -> implemented
+implemented -> needs_review
+needs_review -> changes_requested
+changes_requested -> in_progress
+needs_review -> ready_to_merge
+ready_to_merge -> done
+```
+
+Escape transitions:
+
+```text
+any non-terminal status -> blocked
+blocked -> planned / in_progress
+any non-terminal status -> abandoned
+```
+
+Only the implementation agent should move `in_progress` to `implemented`, and only after filling handoff. Only review can move a task to `ready_to_merge`. Only the human user can move a task to `done`.
+
 ## Minimal Project Files
 
 Add these files to downstream research repositories:

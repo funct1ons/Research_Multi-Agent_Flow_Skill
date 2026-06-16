@@ -24,14 +24,16 @@ When asked to review, default to read-only review. Do not edit code during revie
 
 1. Clarify the goal enough to make one small task.
 2. Create or update a task card in `tasks/*.md`.
-3. Confirm the task has a branch or worktree, allowed files, forbidden files, acceptance criteria, validation commands, review checklist, and handoff section.
-4. Have one implementation agent, usually OpenCode, execute the task card.
-5. Require the implementing agent to fill the handoff section.
+3. Confirm the task has a valid status, branch or worktree, allowed files, forbidden files, acceptance criteria, validation commands, review checklist, and handoff section.
+4. Move the task from `planned` to `in_progress` when one implementation agent, usually OpenCode, starts executing the task card.
+5. Require the implementing agent to fill the handoff section before moving the task to `implemented`.
 6. Inspect `git status` and `git diff` before trusting any agent report.
 7. Use Codex to review the task card, handoff, and diff without modifying code.
-8. If review finds issues, create a follow-up task card or send a bounded fix request back to the implementation agent.
-9. Let the human user decide whether to commit, squash-merge, tag, or defer.
+8. If review finds issues, move the task to `changes_requested` and create a follow-up task card or send a bounded fix request back to the implementation agent.
+9. Move the task to `ready_to_merge` only after review and validation are acceptable; let the human user decide whether to commit, squash-merge, tag, defer, or mark it `done`.
 10. If results or paper claims are affected, record config, command, commit hash, metrics, and notes under `experiments/`.
+
+Use `blocked` when progress needs a human decision, external resource, or task split. Use `abandoned` only when the task is intentionally dropped. Only the human user can mark a task `done`.
 
 ## Task Sizing
 
