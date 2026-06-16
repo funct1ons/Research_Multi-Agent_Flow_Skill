@@ -1,8 +1,8 @@
 # Task: <task name>
 
-## Owner agent
+## Execution agent
 
-OpenCode
+TBD
 
 ## Status
 
@@ -11,7 +11,7 @@ planned
 Allowed values:
 
 - `planned`: Task card exists, but implementation has not started.
-- `in_progress`: The implementation agent is actively working on the task.
+- `in_progress`: The execution agent is actively working on the task.
 - `implemented`: Implementation is finished and the handoff is filled, but review has not happened.
 - `needs_review`: Waiting for Codex or human review.
 - `changes_requested`: Review found required changes.
@@ -35,7 +35,7 @@ Status transitions:
 
 Rules:
 
-- Only the implementation agent should move `in_progress` to `implemented`, and only after filling the Handoff section.
+- Only the execution agent should move `in_progress` to `implemented`, and only after filling the Handoff section.
 - Only review can move a task to `ready_to_merge`.
 - Only the human user can move a task to `done`.
 - `done` and `abandoned` are terminal unless the human user explicitly reopens the task.
@@ -85,7 +85,7 @@ Focus on:
 
 ## Handoff
 
-To be filled by the implementing agent.
+To be filled by the execution agent.
 
 ### Files changed
 

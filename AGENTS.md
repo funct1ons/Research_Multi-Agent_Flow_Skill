@@ -19,7 +19,9 @@ Project files:
 
 Codex is primarily used for planning, task-card creation, documentation, skill review, repository maintenance, and high-risk reasoning. Codex should default to read-only review when asked to review.
 
-OpenCode is primarily used for local implementation, tests, config/script edits, and bounded repair loops. OpenCode must follow task cards strictly when a task card exists.
+The execution agent may be OpenCode, Reasonix, a low-cost Codex subagent, or another local coding agent. Execution agents are used for local implementation, tests, config/script edits, and bounded repair loops. Execution agents must follow task cards strictly when a task card exists.
+
+When a Codex subagent is used as the execution agent, the planning/reviewing Codex instance must review only from task cards, handoff notes, validation output, and `git diff`, not from trust in the subagent's report.
 
 ## Task Card Policy
 

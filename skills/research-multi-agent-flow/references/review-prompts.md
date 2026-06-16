@@ -1,6 +1,6 @@
 # Review and Handoff Prompts
 
-## Ask OpenCode To Implement
+## Ask An Execution Agent To Implement
 
 ```text
 Please read `tasks/<task-card>.md` and strictly execute the task card.
@@ -30,7 +30,7 @@ Do not modify code. Report:
 ## Convert Review Findings To Follow-Up
 
 ```text
-Convert the review findings into a small OpenCode task card.
+Convert the review findings into a small execution-agent task card.
 
 Keep scope narrow:
 - one goal
